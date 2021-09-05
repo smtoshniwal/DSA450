@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+void swap(int *a,int *b){
+int temp;
+temp=*a;
+*a=*b;
+temp=*a;
+
+}
+
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int siz;
+	    cin>>siz;
+	    int arr[siz];
+	    int s=siz-1,j=0;
+	    
+	    for(int i=0;i<siz;i++)
+	    cin>>arr[i];
+	    
+	    
+	       while(j<((siz-1)/2)+1){
+	    
+	       swap(arr[j],arr[s]);
+	       j++;
+	       s--;
+	        
+	    } 
+	    
+	    
+	    for(int i=0;i<siz;i++)
+	    cout<<arr[i]<<" ";
+	    
+	    cout<<endl;
+	    
+	}
+	return 0;
+}
